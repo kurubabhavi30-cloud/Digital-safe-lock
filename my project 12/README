@@ -1,0 +1,75 @@
+# Digital Safe Lock using Verilog HDL
+
+## Overview
+
+This project implements a Digital Safe Lock using Verilog HDL. The safe unlocks only when the correct 4-bit password is entered. If the password is incorrect, the safe remains locked.
+
+## Features
+
+- 4-bit password authentication
+- Lock and Unlock indication
+- Reset functionality
+- Simple FSM-based design
+- Easy FPGA implementation
+
+## Inputs
+
+| Signal | Width | Description |
+|--------|------|-------------|
+| clk | 1 | Clock Signal |
+| reset | 1 | Active High Reset |
+| password | 4 | User Password |
+
+## Outputs
+
+| Signal | Width | Description |
+|--------|------|-------------|
+| unlock | 1 | Safe Unlock Indicator |
+
+## Default Password
+
+```
+1010 (Decimal 10)
+```
+
+## Truth Table
+
+| Reset | Password | Unlock |
+|-------|----------|--------|
+|1|XXXX|0|
+|0|1010|1|
+|0|Others|0|
+
+## Applications
+
+- Electronic Safe
+- Digital Locker
+- Security Systems
+- Bank Lockers
+- Smart Homes
+
+## Tools Used
+
+- Verilog HDL
+- ModelSim / Vivado
+- GitHub
+
+## Project Files
+
+```
+Digital-Safe-Lock/
+│── README.md
+│── digital_safe_lock.v
+│── digital_safe_lock_tb.v
+│── simulation_output.txt
+│── waveform.png
+```
+
+## Future Enhancements
+
+- Multiple user passwords
+- Wrong attempt counter
+- Alarm system
+- Keypad interface
+- LCD display support
+
